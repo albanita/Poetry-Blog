@@ -3,7 +3,7 @@ require_once 'assets/includes/db_conection.php';
 require_once 'assets/includes/gestorBD.php';
 
     $titlu = $_POST['numePoezie'];
-    $poezie = getPoem($db, $titlu);
+    $poezie = getPoemByTitle($db, $titlu);
     if($poezie != null)
     {
         $id = $poezie['id'];
