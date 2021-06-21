@@ -5,7 +5,7 @@
      <div>
                         <?php
                             $id = $_GET['id'];
-                            $poezie = getPoemID($db, $id);
+                            $poezie = getPoemByID($db, $id);
                             $titlu = $poezie['titlu'];
                         ?>
                         <h1><?= $titlu ?></h1>

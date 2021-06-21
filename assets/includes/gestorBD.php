@@ -65,7 +65,7 @@
         return $result;
     }
 
-    function getPoemID($conexion, $id)
+    function getPoemByID($conexion, $id)
     {
         $sql = "select * from poezie where id = '$id'";
         $resultat = mysqli_query($conexion, $sql);

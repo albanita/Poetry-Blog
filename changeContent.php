@@ -2,7 +2,7 @@
     require_once 'assets/includes/cabecera.php';
 ?>
     <?php
-        $poezie = getPoemID($db, $_GET['id']);
+        $poezie = getPoemByID($db, $_GET['id']);
         $titlu = $poezie['titlu'];
         $poza = $poezie['poza'];
         $continut = $poezie['continut'];
