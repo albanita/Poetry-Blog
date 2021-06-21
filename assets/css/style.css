@@ -1,0 +1,249 @@
+#meniu ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#meniu ul li{
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color:#661FD1;
+    /*opacity: 0.8;*/
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#meniu ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#meniu ul li a:hover{
+    background-color:#000000;
+}
+
+#meniu ul li ul li{
+    display: none;
+}
+
+#meniu ul li:hover ul li{
+    display: block;
+}
+
+#meniu{
+    display: flex;
+    justify-content: center;
+}
+
+.cabecera label{
+    color: white;
+}
+
+#cautare{
+    margin: 1px auto;
+    padding-bottom: 10px;
+}
+
+#logotip{
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1.3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #0F45BA;
+}
+
+.cabecera{
+    background-image: linear-gradient(#F00808, #D9A5A5, #661FD1);
+    display: grid;
+    padding-bottom: 20px;
+}
+
+body{
+    background-color: #EBAAAA;
+}
+
+#container{
+    margin: 0px auto;
+    background-color: #EBAAAA;
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    color: rgb(236, 161, 161);
+    clear: both;
+    margin: 0px auto;
+    height: 50px;
+    line-height: 50px;
+    min-height: 20%;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer p a{
+    color: white;
+}
+
+footer #numaratoare{
+    float: right;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+#principal{
+    border: 2px solid black;
+    margin: 0px auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+#principal h1{
+    font-size: 50px;
+    letter-spacing: 1.3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #0F45BA;
+    padding-left: 10px;
+    border-bottom: 2px solid black;
+}
+
+article{
+    border-bottom: 1px dashed black;
+    padding-left: 10px;
+}
+
+article #titlu{
+    margin-left: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+article #detalii{
+    padding-bottom: 10px;
+    position: relative;
+    left: 20px;
+}
+
+article #parte{
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+}
+
+#pozaRel{
+    padding-left: 37%;
+}
+
+div p{
+    white-space: pre-line;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+}
+
+#text{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#versuri{
+    white-space: pre-wrap;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.buton{
+    color: white;
+    background-color: #0F45BA;
+    border-color: #0F45BA;
+}
+
+.buton-albastru{
+    background-color: #0F45BA;
+    border-color: #0F45BA;
+    color: white;
+    padding: 2%;
+    float: right;
+    margin-right: 2%;
+}
+
+.buton-rosu{
+    background-color: #c90f0f;
+    border-color: #c90f0f;
+    color: white;
+    padding: 2%;
+    float: right;
+    margin-right: 2%;
+}
+
+.buton-verde{
+    background-color: green;
+    border-color: green;
+    color: white;
+    padding: 2%;
+    float: right;
+    margin-right: 2%;
+}
+
+#btnEditare{
+    margin-left: 80%;
+    margin-bottom: 10px;
+}
+
+#comentariu{
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+#comentarii{
+    border-bottom: 2px solid black;
+    
+}
+
+#comentarii p{
+    font-family: cursive;
+    font-weight: 300;
+}
+
+#editeaza{
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+section{
+    min-height: 80%;
+}
+
+.formular{
+    padding: 10px;
+}
+
+textarea{
+    margin: 0px;
+    width: 662px;
+    height: 318px;
+}
+
+.eroare p
+{
+    text-align: center;
+    color: red;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.aviz p{
+    text-align: center;
+    color: blue;
+    font-size: x-large;
+    font-weight: 800;
+}
