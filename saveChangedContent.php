@@ -1,11 +1,11 @@
 <?php
-
+// saves the changes made to a poem in the database and then goes back to the poem that was changed
 require_once 'assets/includes/db_conection.php';
     if(isset($_POST) && isset($_FILES))
     {
         $titlu = $_POST['titlu'];
         $id = $_POST['id'];
-        $continut = addslashes("\n".$_POST['continut']); // escape caractere ' si "; defapt adauga \' si \"
+        $continut = addslashes("\n".$_POST['continut']);
         $poza = $_FILES['poza'];
 
         $stergePoza = $_POST['stergePoza'];

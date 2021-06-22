@@ -1,7 +1,9 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // used to add or edit a poem (the content, that means photo, verses, title and the book the poem belongs to) 
+    // and then calls saveContent.php to store the new or updated data in the database
 ?>
-    <!--adaugare/editare-->
+    <!--add/edit-->
             <script type="text/javascript" src="./assets/js/jQuerry.js"></script>
             <script type="text/javascript" src="./assets/js/titleValidation.js"></script>
                     <h1>Adaugă</h1>
@@ -35,7 +37,7 @@
                         <textarea name="continut" cols="50" rows="20"></textarea>
                         <input type="submit" class="buton" value="Salvează">
                     </form>
-                    <!--fin adaugare/editare-->
+                    <!--end add/edit-->
 <?php
     require_once 'assets/includes/pie.php';
 ?>

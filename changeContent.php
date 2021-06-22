@@ -1,5 +1,6 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // used to change the content of a poem like title, photo, verses, and then calls saveChangedContent.php to commit the changes in the database
 ?>
     <?php
         $poezie = getPoemByID($db, $_GET['id']);

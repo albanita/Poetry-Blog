@@ -1,10 +1,11 @@
 <?php
+    // this document shows the author's biography, which she can modify as she likes, when she is logged in
     require_once 'assets/includes/cabecera.php';
 ?>
                         <?php
                             $autor = getAutor($db);
                         ?>
-                        <!--Despre mine-->
+                        <!--about the author-->
                         <div>
                             <h1>Despre mine</h1>
                             <div id="pozaRel">
@@ -25,7 +26,7 @@
                                     <input type="submit" value="Editează"  class="buton">
                                 </form>
                             <?php endif; ?>
-                        </div> <!--fin despre mine-->
+                        </div> <!--end about the author-->
 <?php
     require_once 'assets/includes/pie.php';
 ?>

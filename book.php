@@ -1,7 +1,8 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // used to show on screen the data of a book by querry string parameters like titlu (means title) and poza (wich means photo) that stores the location of the photo inside the server
 ?>
-    <!--carte-->
+    <!--book-->
                     <div>
                         <?php
                             $titluCarte = $_GET['titlu'];
@@ -30,14 +31,16 @@
                             endif;
                         ?>
 
-                        <?php if(isset($_SESSION['user'])): ?>
+                        <?php if(isset($_SESSION['user'])):
+                            // if the author is online, you can remove the book if she wishes
+                            ?>
                             <div>
                                 <a href="deleteBook.php?id=<?=$carte['id']?>&pozaCarte=<?=$poza?>" class="buton-rosu">Sterge cartea</a>
                             </div>
                         <?php endif; ?>
                         
                         
-                    </div> <!--fin volum-->
+                    </div> <!--end book-->
 <?php
     require_once 'assets/includes/pie.php';
 ?>

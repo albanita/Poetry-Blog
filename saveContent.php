@@ -1,4 +1,5 @@
 <?php
+    // stores the new data inside the database 
     require_once 'assets/includes/db_conection.php';
     if(isset($_POST) && isset($_FILES))
     {
@@ -12,7 +13,7 @@
             $ruta = "./assets/imagini/$titlu.jpg";
             move_uploaded_file($poza['tmp_name'], $ruta);
         }
-        $continut = addslashes("\n".$_POST['continut']); // escape caractere ' si "; defapt adauga \' si \"
+        $continut = addslashes("\n".$_POST['continut']);
         
         $sql = "insert into poezie values(null, '$titlu', '$carte', '$ruta', '$continut', CURDATE())";
         mysqli_query($db, $sql);

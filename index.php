@@ -1,10 +1,9 @@
 <?php require_once 'assets/includes/cabecera.php'; ?>
-                    <!--toate poeziile-->
+                    <!--all the poems-->
+                    <!--the index.php shows all the poems stored in the database-->
                     <div>
-                        <!-- <h1>Ultimele postări</h1> -->
                         <h1>Toate poeziile</h1>
                         <?php
-                            //$poezii = ultimele4Poezii($db);
                             $poezii = getAllPoems($db);
                             if(!empty($poezii)):
                                 while($poezie = mysqli_fetch_assoc($poezii)):
@@ -21,7 +20,7 @@
                             endif;
                         ?>
                         
-                    </div> <!--fin toate poeziile-->
+                    </div> <!--end all poems-->
 
 <?php
     require_once 'assets/includes/pie.php';

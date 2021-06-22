@@ -1,4 +1,5 @@
 <?php
+// verify if the author inserted correctly the username and password, and if so, the app goes to the index.php with the user logged in; else, shows an error message in the connect.php page
 require_once 'assets/includes/db_conection.php';
     $user = $_POST['nume'];
     $pass = $_POST['parola'];

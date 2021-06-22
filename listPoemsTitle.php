@@ -1,13 +1,10 @@
 <?php
     require_once 'assets/includes/db_conection.php';
     require_once 'assets/includes/gestorBD.php';
-
+    // used to verify if the title of a poem is repeated. This one is used in assets/js/titleValidation.js, in the AJAX method 
     if(isset($_SESSION['user'])){
-        $poezii = listPoemsTitle($db);
-        echo $poezii;
-    }
-    else{
-        header("Location: error.php?mesaj=Nu aveți dreptul să accesați aceste informații!");
+        $poems = listPoemsTitle($db);
+        echo $poems;
     }
 
 ?>

@@ -1,5 +1,6 @@
 <?php require_once 'assets/includes/cabecera.php'; ?>
-                    <!--ultimele poezii-->
+<!--shows on the screen the list of all the books (their title and photo) stored in the database, giving the opportunity to access a book by clicking on its title-->
+                    <!--book list-->
                     <div>
                         <h1>Cărți</h1>
                         <?php
@@ -20,7 +21,7 @@
                             endif;
                         ?>
                         
-                    </div> <!--fin ultimele poezii-->
+                    </div> <!--end book list-->
 
 <?php
     require_once 'assets/includes/pie.php';

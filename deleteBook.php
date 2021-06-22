@@ -1,4 +1,5 @@
 <?php
+// used to delete a book from the database by an id given in the query string, given by GET method
 require_once 'assets/includes/db_conection.php';
     $id = $_GET['id'];
     $pozaCarte = $_GET['pozaCarte'];

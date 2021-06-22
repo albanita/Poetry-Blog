@@ -1,4 +1,5 @@
 <?php
+// stores the data of a comment in the database
 require_once 'assets/includes/db_conection.php';
 require_once 'assets/includes/gestorBD.php';
 
@@ -27,11 +28,11 @@ use PHPMailer\PHPMailer\PHPMailer;
         }
     }
 
-    function sendMessage($nume, $idPoezie, $emailAutor)
+    // sends a message to the author by the $emailAutor given from the $name given on the poem with $idPoem given
+    function sendMessage($name, $idPoem, $emailAutor)
     {
-        /*$link = "http://localhost/BlogPoeziiMami/poezie.php?id=$idPoezie";*/
-        $link = "http://blog-poezii-danab.rf.gd/poezie.php?id=$idPoezie";
-        $message = "Aveti un comentariu nou de la $nume pe blog. Va rugam sa accesati link-ul urmator pentru a-l vizualiza: $link \r\n Totodata, va rugam sa nu raspundeti la acest mesaj.";
+        $link = "http://blog-poezii-danab.rf.gd/poem.php?id=$idPoem";
+        $message = "Aveti un comentariu nou de la $name pe blog. Va rugam sa accesati link-ul urmator pentru a-l vizualiza: $link \r\n Totodata, va rugam sa nu raspundeti la acest mesaj.";
         $mail = new PHPMailer;
         $mail -> isSMTP();
         $mail -> SMTPDebug = 2;
@@ -44,7 +45,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         $mail->setFrom('poeziidb@gmail.com', 'Comentariu nou');
         $mail->addReplyTo('poeziidb@gmail.com', 'Comentariu nou');
         $mail->addAddress("$emailAutor", 'Daniela');
-        $mail->Subject =  "Aveti un comentariu nou de la $nume";
+        $mail->Subject =  "Aveti un comentariu nou de la $name";
         $mail -> isHTML(true);
         $mail -> Body = '<p>'.$message.'</p>';
         $mail->AltBody = $message;

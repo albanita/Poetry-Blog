@@ -1,5 +1,6 @@
 <?php
 require_once 'assets/includes/db_conection.php';
+    // deletes a poem with its comments from the database by an id given by GET method, and then goes to index.php  
     $id = $_GET['id'];
 
     $sqlTitluPoezie = "select titlu from poezie where id = '$id'";

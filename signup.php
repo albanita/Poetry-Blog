@@ -1,5 +1,5 @@
 <?php require_once 'assets/includes/cabecera.php'; ?>
-
+    <!-- used by the user to insert its data for the sign up and then calls register.php to store the data in the DB -->
     <p>
         Cu formularul de mai jos, va veti inregistra numele de utilizator si parola pe acest blog.
         <?php

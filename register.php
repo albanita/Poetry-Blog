@@ -1,4 +1,5 @@
 <?php
+    // used for user registration
     require_once 'assets/includes/db_conection.php';
     $utilizator = $_POST['numeUtilizator'];
     $parola = $_POST['parola'];

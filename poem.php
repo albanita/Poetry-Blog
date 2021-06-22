@@ -1,7 +1,8 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // shows on screen the poem to an user, giving him the opportunity to add a comment. If the author is logged in, she can validate or permanently remove a comment
 ?>
-     <!--poezie-->
+     <!--poem-->
      <div>
                         <?php
                             $id = $_GET['id'];
@@ -36,8 +37,7 @@
                         </div>
 
                         
-                        <!--sectia de comentarii-->
-                            <!--comentarii anterioare-->
+                        <!--comment section-->
                             <?php 
                                 $comentariiVizibile = getVisibleComments($db, $id);
                                 $comentariiNOVizibile = getInvizibleComments($db, $id);
@@ -49,7 +49,7 @@
                                         $cont = $comentariu['comentariu'];
                                         $dataAdaugare = $comentariu['dataAdaugare'];
                             ?>
-                                <!-- vizibile -->
+                                <!-- visible comments -->
                                 <div id="comentarii">
                                     <div>
                                         <label for="nume">Nume: <?=$nume;?></label>
@@ -76,7 +76,7 @@
                                             $dataAdaugare = $comentariu['dataAdaugare'];
                                             $id = $comentariu['id'];
                                 ?>
-                                <!-- NO vizibile -->
+                                <!-- invizible comments -->
                                     <div id="comentarii">
                                         <div>
                                             <label for="nume">Nume: <?=$nume;?></label>
@@ -101,7 +101,7 @@
                         <?php if(!isset($_SESSION['user'])): ?>
                                 <a href="addComment.php?idCarte=<?=$poezie['idCarte']?>&id=<?=$id;?>" class="buton-albastru">Adaugă un Comentariu</a>
                         <?php endif; ?>
-                    </div> <!--fin poezie-->
+                    </div> <!--end poem-->
 <?php
     require_once 'assets/includes/pie.php';
 ?>

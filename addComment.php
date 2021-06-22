@@ -1,12 +1,13 @@
 <?php
 require_once 'assets/includes/cabecera.php';
+// used to insert the data of a comment of a poem and then calls insertComment.php to sore it into the database
 ?>
 
 <?php 
     $idCarte = $_GET['idCarte'];
     $id = $_GET['id'];
 ?>
-    <!--adaugare comentariu-->
+    <!--add a comment-->
     <form action="insertComment.php" class="formular" method="POST" id="comentariu">
             <input type="hidden" name="idCarte" value="<?=$idCarte?>" >
             <input type="hidden" name="idPoezie" value="<?=$id?>" >

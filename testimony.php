@@ -1,5 +1,6 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // the biography of the author, which she does not want to ever change
 ?>
      <div>
                         <h1>Mărturia întoarcerii mele la Dumnezeu</h1>

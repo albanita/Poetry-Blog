@@ -1,5 +1,6 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // when the author is logged in, she can change its personal data and then calls savePersonalData.php to store the updated data in the database
 ?>
 
                     <?php

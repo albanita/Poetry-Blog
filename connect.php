@@ -1,5 +1,6 @@
 <?php
     require_once 'assets/includes/cabecera.php';
+    // used by the author to log in with her username and password then calls login.php with the POST method
 ?>
 
     <p>

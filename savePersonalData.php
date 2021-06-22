@@ -1,5 +1,6 @@
 <?php
 require_once 'assets/includes/db_conection.php';
+    // used to save the personal data of the author and then goes to the about page
     if(isset($_POST))
     {
         $email = $_POST['email'];

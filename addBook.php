@@ -1,4 +1,5 @@
 <?php
+    // this is used to insert the data of a new book and then store it in the database by calling saveBook.php
     require_once 'assets/includes/cabecera.php';
 ?>
 

@@ -1,4 +1,5 @@
 <?php
+// inserts a new book in the database
 require_once 'assets/includes/db_conection.php';
     if(isset($_POST) && isset($_FILES))
     {

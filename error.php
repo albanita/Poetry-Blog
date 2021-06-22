@@ -1,13 +1,14 @@
 <?php
+    // this is the error page
     require_once 'assets/includes/cabecera.php';
 
-    $eroare = $_GET['mesaj'];
+    $error = $_GET['mesaj'];
 ?>
     <div class="eroare">
         <p>
             A apărut o eroare!
             <img src="assets/imagini/error.png" alt="eroare">
-            <?=$eroare;?>
+            <?=$error;?>
         </p>
     </div>
 <?php
