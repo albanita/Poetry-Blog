@@ -28,7 +28,7 @@ use PHPMailer\PHPMailer\PHPMailer;
         }
     }
 
-    // sends a message to the author by the $emailAutor given from the $name given on the poem with $idPoem given
+    // sends a message to the author by the $emailAutor given from the $name given, about a comment on the poem with $idPoem given
     function sendMessage($name, $idPoem, $emailAutor)
     {
         $link = "http://blog-poezii-danab.rf.gd/poem.php?id=$idPoem";
