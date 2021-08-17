@@ -19,12 +19,6 @@ class Database {
     private static $password = "";
     private static $dbName = "blogpoezii";
     
-    // server
-    /*private static $hostName = "sql313.epizy.com";
-    private static $userName = "epiz_26890226";
-    private static $password = "z8XlxQ78BMb";
-    private static $dbName = "epiz_26890226_blogpoezii";*/
-    
     private static $db=null;
     
     /**
