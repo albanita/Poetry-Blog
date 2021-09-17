@@ -51,8 +51,10 @@
                     <div class="mt-2">
                         <label for="poza">Alegeti o poza pentru poezie: </label>
                         <input type="file" name="poza">
-                        <label for="faraPoza">Nu vreau poza</label>
-                        <input type="checkbox" name="faraPoza">
+                        
+                        <!--<label for="faraPoza">Nu vreau poza</label>
+                        <input type="checkbox" name="faraPoza">-->
+                        
                     </div>
 
                     <label for="carte">Alegeti cartea: </label>

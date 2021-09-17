@@ -13,8 +13,10 @@
                     <div class="mt-2">
                         <label for="poza">Alegeti o poza pentru carte: </label>
                         <input type="file" name="poza">
-                        <label for="faraPoza">Nu vreau poza</label>
-                        <input type="checkbox" checked name="faraPoza">
+                        
+                        <!--<label for="faraPoza">Nu vreau poza</label>
+                        <input type="checkbox" checked name="faraPoza">-->
+                        
                     </div>
                     <button type="submit" class="btn btn-primary mt-2">Adauga Carte</button>
                 </form>

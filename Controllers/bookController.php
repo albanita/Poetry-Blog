@@ -14,6 +14,7 @@ class bookController{
         }
             $gbd = new GestorDB();
             $poems = $gbd::getPoemsByBook($id_book);
+            $bookPhoto = $gbd::getBookPhoto($id_book);
             
             require_once './Views/book/show.php';
     }
@@ -26,10 +27,19 @@ class bookController{
         if(isset($_POST)){
             $bookName = isset($_POST['numeCarte']) ? $_POST['numeCarte'] : false;
             $photoDir = '';
-            if(!isset($_POST['faraPoza'])){
+            
+            /*if(!isset($_POST['faraPoza'])){
                 $photo = $_FILES['poza'];
                 $photoDir = "./assets/imagini/" . $bookName . '.jpg';
                 move_uploaded_file($photo['tmp_name'], $photoDir);
+            }*/
+            
+            if(isset($_FILES['poza'])){
+                if($_FILES['poza']['size']>0){
+                    $photo = $_FILES['poza'];
+                    $photoDir = "./assets/imagini/" . $bookName . '.jpg';
+                    move_uploaded_file($photo['tmp_name'], $photoDir);
+                }
             }
             
             $book = new Book(null, $bookName, $photoDir);

@@ -142,11 +142,23 @@ class poemController {
     private function extractPoemData() {
         $poemName = isset($_POST['numePoezie']) ? $_POST['numePoezie'] : false;
         $photoDir = null;
-        if (!isset($_POST['faraPoza'])) {
+        
+        
+        /*if (!isset($_POST['faraPoza'])) {
             $photo = $_FILES['poza'];
             $photoDir = "./assets/imagini/" . $poemName . '.jpg';
             move_uploaded_file($photo['tmp_name'], $photoDir);
+        }*/
+        
+        if(isset($_FILES['poza'])){
+            if($_FILES['poza']['size'] > 0){
+                $photo = $_FILES['poza'];
+                $photoDir = "./assets/imagini/" . $poemName . '.jpg';
+                move_uploaded_file($photo['tmp_name'], $photoDir);
+            }
         }
+        
+        
         $idBook = isset($_POST['carte']) ? $_POST['carte'] : false;
         $verses = isset($_POST['versuri']) ? addslashes("\n" . $_POST['versuri']) : false;
         if ($poemName && $idBook && $verses) {
