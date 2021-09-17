@@ -55,9 +55,9 @@ class userController {
     }
     
     // uncomment this method to make registration page available
-    public function signUp(){
+    /*public function signUp(){
         require_once 'views/user/register.php';
-    }
+    }*/
     
     public function register(){
         if(isset($_POST)){
