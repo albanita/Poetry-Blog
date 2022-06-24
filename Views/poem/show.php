@@ -11,10 +11,21 @@
             </p>
         </div>
         
-        
+        <!-- facebook share button -->
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v8.0" nonce="qMA1Ys6c"></script>
 <div class="fb-share-button" data-href="<?=base_url?>poem/show&id=<?=$poem->id?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fblog-poezii-danab.rf.gd%2Fpoezie.php%3Fid&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Distribuie</a></div>
+        <!-- END facebook share button -->
         
+        <!-- WhatsApp share button -->
+        <br>
+        <br>
+        <a href="whatsapp://send?text=<?=base_url?><?= urlencode("poem/show&id=$poem->id")?>" hidden data-action="share/whatsapp/share" class="btn btn-info mb-3" id="whatsAppShareBtn">
+            <img src="<?=base_url?>/assets/imagini/whatsapp.png">
+            Trimite pe WhatsApp
+        </a>
+        <!-- END WhatsApp share button -->
+        
+
         <div class="container text-right">
             <?php if(!Utils::userLogedIn()): ?>
             <!--user not logged in-->

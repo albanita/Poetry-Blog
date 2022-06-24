@@ -12,7 +12,11 @@
                                 <?= substr($poem->continut, 0,120).'...' ?>
                             </p>
                             <p class="card-text text-muted small">
-                                <?=$poem->dataAdaugare?> | <?= $gbd::getBookName($poem) ?>
+                                <?php 
+                                // date formating
+                                $data = new DateTime($poem->dataAdaugare);
+                                ?>
+                                <?=$data -> format('d-m-Y')?> | <?= $gbd::getBookName($poem) ?>
                             </p>
                         </div>
                     </div>

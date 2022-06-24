@@ -1,7 +1,7 @@
 <!--title and photo-->
 <p class="poemTitle"><?= $bookName ?></p>
 <div class="d-flex justify-content-center">
-    <?php if ($bookName != null || $bookName != ''): ?>
+    <?php if (($bookName != null || $bookName != '') && $bookPhoto != ""): ?>
         <img src="<?= image_root . $bookName . ".jpg" ?>" class="rounded mb-2" style="width: 25%;" alt="Poza carte">
     <?php endif; ?>
 </div>
@@ -21,7 +21,10 @@
                                 <?= substr($poem->continut, 0, 120) . '...' ?>
                             </p>
                             <p class="card-text text-muted small">
-                                <?= $poem->dataAdaugare ?> | <?= $gbd::getBookName($poem) ?>
+                                <?php
+                                $data = new DateTime($poem->dataAdaugare);
+                                ?>
+                                <?= $data->format('d-m-Y') ?> | <?= $gbd::getBookName($poem) ?>
                             </p>
                         </div>
                     </div>

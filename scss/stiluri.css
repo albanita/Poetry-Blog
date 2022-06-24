@@ -29,6 +29,10 @@ body {
   box-shadow: 0px 0px 80px #585454;
 }
 
+.cardVerset{
+    background-color: #e6005c;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;

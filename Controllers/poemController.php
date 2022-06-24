@@ -12,6 +12,10 @@ class poemController {
     }
 
     public function list() {
+        
+        $verse = new bibleVerseController();
+        $verse ->show();
+        
         $gbd = new GestorDB();
 
         $recordsPerPage = 6;
@@ -47,7 +51,7 @@ class poemController {
 
     public function search() {
         if (isset($_GET)) {
-            $title = $_GET['title'];
+            $title = trim($_GET['title']);
             $gbd = new GestorDB();
             $poem = $gbd::getPoemByTitle($title);
             if ($poem == null) {
@@ -141,23 +145,22 @@ class poemController {
     // in order to use this, $_POST must be set before
     private function extractPoemData() {
         $poemName = isset($_POST['numePoezie']) ? $_POST['numePoezie'] : false;
-        $photoDir = null;
+        $photoDir = "";
         
         
-        /*if (!isset($_POST['faraPoza'])) {
-            $photo = $_FILES['poza'];
+        if($_FILES['poza']['size'] > 0){
             $photoDir = "./assets/imagini/" . $poemName . '.jpg';
+            $photo = $_FILES['poza'];
             move_uploaded_file($photo['tmp_name'], $photoDir);
-        }*/
-        
-        if(isset($_FILES['poza'])){
-            if($_FILES['poza']['size'] > 0){
-                $photo = $_FILES['poza'];
-                $photoDir = "./assets/imagini/" . $poemName . '.jpg';
-                move_uploaded_file($photo['tmp_name'], $photoDir);
+        }
+        else{
+            if(isset($_POST['chDeletePoza'])){
+                if(file_exists($photoDir)){
+                    unlink($photoDir);
+                }
+                $photoDir = "";
             }
         }
-        
         
         $idBook = isset($_POST['carte']) ? $_POST['carte'] : false;
         $verses = isset($_POST['versuri']) ? addslashes("\n" . $_POST['versuri']) : false;

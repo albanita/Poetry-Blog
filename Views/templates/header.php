@@ -12,9 +12,9 @@
         <link rel="icon" href="<?=image_root?>icon.png">
     </head>
     <body>
+        
         <script src="<?= base_url ?>js/bootstrap.js"></script>
-        <script src="<?= base_url ?>js/auxiliaryFunctions/openLink.js"></script>
-        <script src="<?= base_url ?>js/auxiliaryFunctions/search.js"></script>
+        <script src="<?= base_url ?>js/auxiliaryFunctions/whatsAppShare.js"></script>
 
         <section>
             <nav class="navbar navbar-dark bg-dark navbar-expand-xl fixed-top">
@@ -69,7 +69,7 @@
                             <?php else: ?>
                             <li class="nav-item"><a href="<?=base_url?>user/signIn" class="nav-link">Conectati-va</a></li>
                             <?php endif; ?>
-                            <li class="nav-item"><a href="<?=base_url?>contact/index" class="nav-link">Contact Administrator</a></li>
+                            <li class="nav-item"><a href="<?=base_url?>contact/index" class="nav-link">Cuvant Inainte</a></li>
                             <li class="nav-item"><a href="<?=base_url?>news/index" class="nav-link">Urmareste blogul</a></li>
                             
                         </ul>

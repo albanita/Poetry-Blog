@@ -57,7 +57,7 @@ class GestorDB {
     }
     
     public static function getPoemByTitle($title){
-        $sql = "select * from poezie where titlu = '$title'";
+        $sql = "select * from poezie where titlu like '$title%'";
         $poem = self::$db->query($sql);
         if($poem != null){
             return $poem->fetch_object();
@@ -102,7 +102,8 @@ class GestorDB {
     }
     
     public static function savePoem($p){
-        $sql = "insert into poezie values(null, '{$p->getTitle()}', '{$p->getIdBook()}', '{$p->getPhoto()}', '{$p->getContent()}', CURDATE())";
+        $title = trim($p->getTitle());
+        $sql = "insert into poezie values(null, '$title', '{$p->getIdBook()}', '{$p->getPhoto()}', '{$p->getContent()}', CURDATE())";
         $result = self::$db -> query($sql);
         if($result){
             return true;
@@ -297,5 +298,12 @@ class GestorDB {
             $res1 .= "|". $resultat['titlu'];
         }
         return $res1;
+    }
+    
+    public static function getBookPhoto($id_book){
+        $sql = "select poza from carte where id='$id_book'";
+        $res = self::$db -> query($sql);
+        $result = $res->fetch_object();
+        return $result->poza;
     }
 }

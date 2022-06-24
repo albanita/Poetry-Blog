@@ -88,4 +88,22 @@ class Utils {
         }
     }
     
+    
+    private static function generateRandomString(){
+        $collection = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $result = str_shuffle($collection);
+        return $result;
+    }
+    public static function createCookie($name, $daysNumber){
+        $value = self::generateRandomString();
+        $expires = time() + 60*60*24 * $daysNumber;
+        $path = "/";
+        $domain = "";
+        $secure = false;
+        $httponly = false;
+
+        if(!isset($_COOKIE[$name])){
+            setcookie($name, $value, $expires, $path, $domain, $secure, $httponly);
+        }
+    }
 }

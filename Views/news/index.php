@@ -27,7 +27,7 @@
                 <p class="text-primary h2">Urmareste blogul</p>
                 <strong>Daca doriti sa fiti la curent cu noile poezii pe care autorul le publica, va rugam sa introduceti mai jos adresa dumneavoastra de email si apasati pe butonul verde. <br><br></strong>
                 <strong>Daca nu mai doriti sa urmatiti blogul si sa fiti la curent cu ultimele publicari, introduceti adresa dumneavoastra de email, pe care primiti notificarile, si apasati pe butonul rosu.</strong>
-                <strong><br><br>Pentru orice alta neclaritate, <a href="<?=base_url?>contact/index">contactati administratorul.</a></strong>
+                <!--<strong><br><br>Pentru orice alta neclaritate, <a href="<?=base_url?>contact/index">contactati administratorul.</a></strong>-->
                 </p>
                 <input type="email" class="form-control" id="emailFallow" placeholder="name@example.com">
                 <a href="<?=base_url?>news/add&email=" id="btnSave" type="input" class="btn btn-success mt-2 mb-2">Urmareste blogul</a>

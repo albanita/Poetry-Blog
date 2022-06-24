@@ -2,7 +2,8 @@
 <section class="py-5">
     <div class="container myBorderStyle mt-2 mb-5 pb-2 bg-white">
         <p class="mt-4 mb-1">
-        <p class="text-primary h2">Contact Administrator</p>
+        <p class="text-primary h2">Cuvant Inainte</p>
+        <!--<p class="text-primary h2">Contact Administrator</p>
         <strong>Daca aveti nelamuriri, sau ceva de pe pagina nu functioneaza bine, va rog sa-mi scrieti in formularul de mai jos indicand adresa dumneavoastra de email. <br>Va multumesc!</strong>
         </p>
         <div class="row">
@@ -17,7 +18,7 @@
                     <button type="submit" class="btn btn-primary mt-2">Trimite mesaj</button>
                 </form>
             </div>
-        </div>
+        </div> -->
         <p class="mt-1 mb-4">
             <strong><u>Un cuvant de la programatorul acestei pagini web, Alin:</u></strong><br>
             <strong><i>Daca am reusit sa fac aceasta pagina, nu este pentru ca sunt eu mai bun ca altii. Sincer sa fiu, cred ca sunt altii mai buni ca mine. Ii multumesc lui Dumnezeu care mi-a dat putere sa invat aceste lucruri si apoi sa fac ceea ce vedeti.

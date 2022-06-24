@@ -34,12 +34,13 @@ class bookController{
                 move_uploaded_file($photo['tmp_name'], $photoDir);
             }*/
             
-            if(isset($_FILES['poza'])){
-                if($_FILES['poza']['size']>0){
-                    $photo = $_FILES['poza'];
-                    $photoDir = "./assets/imagini/" . $bookName . '.jpg';
-                    move_uploaded_file($photo['tmp_name'], $photoDir);
-                }
+            if($_FILES['poza']['size']>0){
+                $photo = $_FILES['poza'];
+                $photoDir = "./assets/imagini/" . $bookName . '.jpg';
+                move_uploaded_file($photo['tmp_name'], $photoDir);
+            }
+            else{
+                $photoDir = "";
             }
             
             $book = new Book(null, $bookName, $photoDir);

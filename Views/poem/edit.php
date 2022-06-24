@@ -1,3 +1,21 @@
+<script>
+    window.onload = function(){
+        var pozaExemplu = document.getElementById("pozaExemplu");
+        var chDeletePoza = document.getElementById("chDeletePoza");
+    };
+    
+    function hidePoza(){
+        if(pozaExemplu.hidden == false){
+            pozaExemplu.hidden = true;
+        }
+        else{
+            pozaExemplu.hidden = false;
+        }
+        
+        return false;
+    }
+</script>
+
 <section class="py-5 mt-2 mb-5">
     <div class="container myBorderStyle mt-5 pb-2 bg-white">
         <p class="mt-4 mb-1">
@@ -15,13 +33,17 @@
                     <div class="mt-2">
                         <label for="poza">Alegeti o poza pentru poezie: </label>
                         <input type="file" name="poza">
-                        <label for="faraPoza">Nu vreau poza</label>
-                        <?php if($poem->poza == null || $poem->poza == ''): ?>
-                        <input type="checkbox" checked name="faraPoza">
-                        <?php else: ?>
-                        <input type="checkbox" name="faraPoza">
-                        <?php endif; ?>
                     </div>
+                    
+                    <?php if($poem->poza != null || $poem->poza != ''): ?>
+                    <div class="mt-2" id="pozaExemplu">
+                        <img src="<?=image_root.$poem->titlu.".jpg"?>" class="rounded mb-2" style="width: 25%;" alt="Poza poezie">
+                    </div>
+                    <label for="pozaExemplu">Sterge poza</label>
+                    <input type="checkbox" id="chDeletePoza" name="chDeletePoza" onclick="hidePoza();">
+                    <?php endif; ?>
+                    
+                    <br><br>
 
                     <label for="carte">Alegeti cartea: </label>
                     <select name="carte" required>

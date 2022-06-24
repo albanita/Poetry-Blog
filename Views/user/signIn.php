@@ -2,7 +2,7 @@
     <div class="container myBorderStyle mt-5 pb-2 bg-white">
         <p class="mt-4 mb-1">
         <p class="text-primary h2">Conectati-va</p>
-        <strong>Aici se poate conecta doar autorul Daniela Banita. Pentru mai multe informatii, va rugam sa <a href="<?=base_url?>contact/index">contactati administratorul paginii.</a> Multumim pentru intelegere!</strong>
+        <strong>Aici se poate conecta doar autorul Daniela Banita. <!--Pentru mai multe informatii, va rugam sa <a href="<?=base_url?>contact/index">contactati administratorul paginii.</a> --> Multumim pentru intelegere!</strong>
         </p>
         <div class="row">
             <div class="col-12">

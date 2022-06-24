@@ -12,7 +12,7 @@
                 titles = text.split("|");
                 titles.shift();
                 titles.shift();
-                //console.log(titles);
+                console.log(titles);
             },
             error: function(){
                 alert("ERROR!!");
@@ -24,6 +24,7 @@
         };
         
         function verify(){
+            
             if(titles.includes(title.value.trim().toUpperCase())){
                 warning.hidden = false;
             }
@@ -51,9 +52,6 @@
                     <div class="mt-2">
                         <label for="poza">Alegeti o poza pentru poezie: </label>
                         <input type="file" name="poza">
-                        
-                        <!--<label for="faraPoza">Nu vreau poza</label>
-                        <input type="checkbox" name="faraPoza">-->
                         
                     </div>
 
